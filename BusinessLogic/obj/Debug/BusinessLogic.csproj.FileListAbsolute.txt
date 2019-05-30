@@ -1,0 +1,10 @@
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\bin\Debug\BusinessLogic.exe.config
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\bin\Debug\BusinessLogic.exe
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Debug\BusinessLogic.exe
+C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Debug\BusinessLogic.pdb

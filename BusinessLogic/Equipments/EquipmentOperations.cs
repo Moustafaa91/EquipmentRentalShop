@@ -1,7 +1,6 @@
 ﻿using BusinessLogic.BusinessObjects;
 using BusinessLogic.LoyaltyPoints;
 using BusinessLogic.PriceCalculations;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 
@@ -10,26 +9,12 @@ namespace BusinessLogic.Equipments
 
     public class EquipmentOperations
     {
-        private const string FilePath = "../../Mock data/EquipmentsDetails.json";
 
         public List<Equipment> GetAllEquipments()
         {
             List<Equipment> equipments = new List<Equipment>();
-            string text;
-            if (!File.Exists(FilePath))
-            {
-                // In case file is not found, return static mocked data
-                // Just for running demo purposoes and avoid any exceptions
-                equipments = GetMockEquipmentsData();
-            }
-            using (FileStream fileStream = new FileStream(FilePath, FileMode.Open))
-            {
-                using (StreamReader reader = new StreamReader(fileStream))
-                {
-                    text = reader.ReadToEnd();
-                }
-                equipments = JsonConvert.DeserializeObject<List<Equipment>>(text);
-            }
+            equipments = GetMockEquipmentsData();
+
             return equipments;
         }
 

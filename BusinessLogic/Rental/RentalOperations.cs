@@ -4,10 +4,10 @@ using BusinessLogic.PriceCalculations;
 using System.Collections.Generic;
 using System.IO;
 
-namespace BusinessLogic.Equipments
+namespace BusinessLogic.Rental
 {
 
-    public class EquipmentOperations
+    public class RentalOperations
     {
 
         public List<Equipment> GetAllEquipments()

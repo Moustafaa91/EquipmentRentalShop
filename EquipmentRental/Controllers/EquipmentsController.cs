@@ -1,29 +1,32 @@
-﻿using BusinessLogic.Equipments;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace EquipmentRental.Controllers
 {
-    public class EquipmentController : Controller
+    public class EquipmentsController : Controller
     {
-        // GET: Equipment
-        public ActionResult Show()
+        // GET: Equipments
+        public ActionResult Index()
         {
-            return View();
+            return View("EquipmentsList");
         }
 
-        // GET: Equipment/Details/5
+        // GET: Equipments/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Equipment/Create
+        // GET: Equipments/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Equipment/Create
+        // POST: Equipments/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -39,13 +42,13 @@ namespace EquipmentRental.Controllers
             }
         }
 
-        // GET: Equipment/Edit/5
+        // GET: Equipments/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Equipment/Edit/5
+        // POST: Equipments/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -61,13 +64,13 @@ namespace EquipmentRental.Controllers
             }
         }
 
-        // GET: Equipment/Delete/5
+        // GET: Equipments/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Equipment/Delete/5
+        // POST: Equipments/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

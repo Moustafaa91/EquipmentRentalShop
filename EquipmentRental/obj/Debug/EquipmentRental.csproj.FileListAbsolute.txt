@@ -146,10 +146,6 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\obj\Debug\Eq
 C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\obj\Debug\EquipmentRental.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\obj\Debug\EquipmentRental.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\obj\Debug\EquipmentRental.pdb
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.csprojAssemblyReference.cache
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.csproj.CoreCompileInputs.cache
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.dll
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\EquipmentRental.dll.config
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\EquipmentRental.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\EquipmentRental.pdb
@@ -217,4 +213,8 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\Syst
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\System.Web.Helpers.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\System.Web.Mvc.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.csprojAssemblyReference.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.csproj.CopyComplete
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental\obj\Debug\EquipmentRental.pdb

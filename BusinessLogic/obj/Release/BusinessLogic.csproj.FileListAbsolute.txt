@@ -8,3 +8,10 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogi
 C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Release\BusinessLogic.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Release\BusinessLogic.exe
 C:\Users\Mostafa.Attia\source\repos\EquipmentRental\EquipmentRental\BusinessLogic\obj\Release\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\BusinessLogic.exe.config
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\BusinessLogic.exe
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.exe
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.pdb

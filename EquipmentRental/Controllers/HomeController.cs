@@ -11,7 +11,7 @@ namespace EquipmentRental.Controllers
             model.Add(new SelectListItem() { Text = "1", Value = "1" });
             model.Add(new SelectListItem() { Text = "2", Value = "2" });
             model.Add(new SelectListItem() { Text = "3", Value = "3" });
-            return View("Home", model);
+            return View("EquipmentsList", model);
         }
     }
 }

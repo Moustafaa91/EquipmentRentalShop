@@ -50,7 +50,7 @@
     <Compile Include="BusinessObjects\Order.cs" />
     <Compile Include="Enums\EquipmentTypes.cs" />
     <Compile Include="Enums\RentalFees.cs" />
-    <Compile Include="Equipments\EquipmentOperations.cs" />
+    <Compile Include="Rental\RentalOperations.cs" />
     <Compile Include="LoyaltyPoints\LoyaltyPointsCalculator.cs" />
     <Compile Include="PriceCalculations\HeavyPriceCalculation.cs" />
     <Compile Include="PriceCalculations\ICalculation.cs" />
@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Mock data\EquipmentsDetails.json" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

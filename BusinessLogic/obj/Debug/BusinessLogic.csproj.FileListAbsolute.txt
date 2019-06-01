@@ -14,3 +14,4 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Debug\
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Debug\BusinessLogic.exe
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache

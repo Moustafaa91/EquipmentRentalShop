@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EquipmentsRental.Models.EquipmentModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    
+    @{ if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                @Html.DropDownList("MySkills", (ICollection<SelectListItem>)Model);
+            }
+        }
+    }
+
+</table>

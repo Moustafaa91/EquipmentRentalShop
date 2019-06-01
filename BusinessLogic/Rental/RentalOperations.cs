@@ -7,7 +7,7 @@ using System.IO;
 namespace BusinessLogic.Rental
 {
 
-    public class RentalOperations
+    public class RentalOperations : IRentalOperations
     {
 
         public List<Equipment> GetAllEquipments()

@@ -7,8 +7,8 @@ This repository for Online construction equipment rental MVC prove-of-concept ap
 ### Prerequisites
 
 To start build the project you  need to make sure you installed:
-* .Net framework 4.6.1
-* Newtonsoft.Json package, to install it run this command in Package Manager Console at visual studio ```Install-Package Newtonsoft.Json```
+* Make sure that .Net framework 4.5 installed
+* Unity package for applying DI, to install it run this command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3```
 
 ## Solution Details and Design
 This solution based on MVC design pattern, as Controller layer calls the business logic layer and retrieve object that contains service response and the model in case of success calling. 

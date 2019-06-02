@@ -1,8 +1,8 @@
 ﻿@model EquipmentsRental.Models.EquipmentModel
 
 
-<h4>EquipmentModel</h4>
-<hr />
+<h4>Equipment Details</h4>
+
 @if (Model != null)
 {
     <div>
@@ -31,19 +31,7 @@
                 @Html.DisplayFor(model => model.Description)
             </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.RentDays)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.RentDays)
-            </dd>
-
         </dl>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
 }
 

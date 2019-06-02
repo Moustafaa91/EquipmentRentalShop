@@ -29,20 +29,24 @@
 
 
         Days to rent:
-        <input type="number" size="20" min="1" class="daysRental" />
-        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">Add</a> - 
-        @Html.ActionLink("Show details", "ShowEquipmentDetails")
+        <input style="width:60px" type="number" min="1" max="365" id="daysRental" />
+        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">Add</a>
 
     </div>
 
 </div>
 
-<div>
+<hr />
+
+<div id="divContent">
     @{ Html.RenderPartial("~/Views/Equipments/EquipmentDetails.cshtml", Model.DetailsObject); }
 </div>
 
-<div id="divContent">
+Equipments Cart
+<div class="equipmentsCart">
+    <ul id="equipmentsItems">
 
+    </ul>
 </div>
 
 
@@ -70,20 +74,31 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        var s = 1;
+        $('#daysRental').val(1);
+        deleteEquItem = function () {
+            alert('aa');
+        }
         addEquipment = function () {
-            $('.daysRental').css('visibility', 'visible');
+            var selectedValue = $('#EquipmentsList').val();
+            var selectedText = $('#EquipmentsList option[value="' + selectedValue + '"]').text();
+            var daysRental = $('#daysRental').val();
+            if (daysRental < 1 || daysRental > 365) {
+                alert('Rental days should be between 1 and 365.');
+                return;
+            }
+            var hrefItem = '<a href="#" onclick="deleteEquItem()">X</a>';
+            var addedItem = '<li>' + selectedText + ' | rental for :' + daysRental.toString() + ' day(s) ' + hrefItem + '</li> ';
+            $('#equipmentsItems').append(addedItem);
+            $('#daysRental').val(1);
         }
         $("#EquipmentsList").on('change', function () {
 
-            var selValue = $('#EquipmentsList').val();
-            //document.getElementById('SelectedEquipment').value = selValue;
+            var selectedValue = $('#EquipmentsList').val();
+            $('#daysRental').val(1);
 
             $.ajax({
-                type: "POST",
-                url: "/Home/ShowEquipmentDetails/" + selValue,
-                //dataType: "json",
-                //data: { equipmentId: selValue },
+                type: "GET",
+                url: "/Home/ShowEquipmentDetails/" + selectedValue,
                 success: (data) => {
                     $("#divContent").html(data);
                 },

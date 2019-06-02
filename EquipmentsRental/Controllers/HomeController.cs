@@ -40,13 +40,13 @@ namespace EquipmentsRental.Controllers
             return View("Index", model);
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("ShowEquipmentDetails/{id}")]
         public ActionResult ShowEquipmentDetails(int id)
         {
             model.DetailsObject = model.EquipmentsList.Find(x => x.EquipmentId == id);
-            //model.partialView = RenderRazorViewToString("Index",model);
-            return View("Index", model);
+            return PartialView("../Equipments/EquipmentDetails", model.DetailsObject);
+            
         }
 
         public ActionResult About()

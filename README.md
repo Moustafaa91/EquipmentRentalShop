@@ -8,7 +8,8 @@ This repository for Online construction equipment rental MVC prove-of-concept ap
 
 To start build the project you  need to make sure you installed:
 * Make sure that .Net framework 4.5 installed
-* Unity package for applying DI, to install it run this command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3```
+* Unity package for applying DI
+** it should be installed in project, and in case it's not you can simply installed with the following command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3```
 
 ## Solution Details and Design
 This solution based on MVC design pattern, as Controller layer calls the business logic layer and retrieve object that contains service response and the model in case of success calling. 
@@ -40,11 +41,11 @@ Any utilites class or methods used in application, for example:
 
 ## Technologies used
 
-* [ASP.Net core  2.1.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) - .Net core framework
-* [Swashbuckle.AspNetCore 4.0.1](https://www.nuget.org/packages/Swashbuckle.AspNetCore/4.0.1) - Swagger UI
-* [nager api](https://date.nager.at) Public Holidays API
-* MSTest .Net core
+
+* MSTest .Net framework
 * Dependency Injection
+* Jquery
+* Bootstrap
 
 ## Future work
 * Build friendly view layer with angular 2+ that uses these controllers to view holidays in calendar for selected country and year.

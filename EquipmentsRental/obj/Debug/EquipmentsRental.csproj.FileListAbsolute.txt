@@ -80,3 +80,5 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Deb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\log4net.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\log4net.xml

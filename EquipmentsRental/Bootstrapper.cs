@@ -3,6 +3,7 @@ using Microsoft.Practices.Unity;
 using Unity.Mvc3;
 using BusinessLogic.Rental;
 using EquipmentsRental.Controllers;
+using EquipmentsRental.Utilities;
 
 namespace EquipmentsRental
 {

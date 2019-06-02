@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using BusinessLogic.Rental;
 using System;
 using System.IO;
+using EquipmentsRental.Utilities;
 
 namespace EquipmentsRental.Controllers
 {
@@ -16,27 +17,39 @@ namespace EquipmentsRental.Controllers
 
         public HomeController(IRentalOperations _rentalOperations)
         {
-            this.rentalOperations = _rentalOperations;
-            this.model = new HomeModel();
-            this.model.EquipmentsList = new List<EquipmentModel>();
-            var result = this.rentalOperations.GetAllEquipments();
-            foreach (var item in result)
+            try
             {
-                
-                model.EquipmentsList.Add(new EquipmentModel()
+                Log.Info("HomeController constructor start");
+                this.rentalOperations = _rentalOperations;
+                this.model = new HomeModel();
+                this.model.EquipmentsList = new List<EquipmentModel>();
+                var result = this.rentalOperations.GetAllEquipments();
+                foreach (var item in result)
                 {
-                    Description = item.Description,
-                    EquipmentId = item.EquipmentId,
-                    Name = item.Name,
-                    RentDays = item.RentDays,
-                    Type = (int)item.Type == 1 ? Enums.EquipmentTypes.Heavy : (int)item.Type == 2 ? Enums.EquipmentTypes.Regular : Enums.EquipmentTypes.Specialized
-                });
+
+                    model.EquipmentsList.Add(new EquipmentModel()
+                    {
+                        Description = item.Description,
+                        EquipmentId = item.EquipmentId,
+                        Name = item.Name,
+                        RentDays = item.RentDays,
+                        Type = (int)item.Type == 1 ? Enums.EquipmentTypes.Heavy : (int)item.Type == 2 ? Enums.EquipmentTypes.Regular : Enums.EquipmentTypes.Specialized
+                    });
+                }
+                Log.Info("HomeController constructor end");
             }
+            catch (Exception ex)
+            {
+                Log.Error("Error in HomeController constructor", ex);
+            }
+            
         }
         public ActionResult Index()
         {
+            Log.Info("HomeController Index method start");
             model.DetailsObject = model.EquipmentsList[0];
-            
+
+            Log.Info("HomeController Index method end");
             return View("Index", model);
         }
 
@@ -44,10 +57,26 @@ namespace EquipmentsRental.Controllers
         [Route("ShowEquipmentDetails/{id}")]
         public ActionResult ShowEquipmentDetails(int id)
         {
+            Log.Info("HomeController ShowEquipmentDetails method start");
             model.DetailsObject = model.EquipmentsList.Find(x => x.EquipmentId == id);
+
+            Log.Info("HomeController ShowEquipmentDetails method end");
             return PartialView("../Equipments/EquipmentDetails", model.DetailsObject);
             
         }
+
+        [HttpPost]
+        [Route("BuyEquipments/{purchasedItems}")]
+        public ActionResult BuyEquipments(List<string> purchasedItems)
+        {
+            Log.Info("HomeController BuyEquipments method start");
+
+            Log.Info("HomeController BuyEquipments method end");
+            return PartialView("../Equipments/EquipmentDetails", model.DetailsObject);
+
+        }
+
+
 
         public ActionResult About()
         {

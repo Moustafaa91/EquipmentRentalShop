@@ -30,7 +30,7 @@
 
         Days to rent:
         <input style="width:60px" type="number" min="1" max="365" id="daysRental" />
-        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">Add</a>
+        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">Add to Cart</a>
 
     </div>
 
@@ -44,10 +44,10 @@
 
 Equipments Cart
 <div class="equipmentsCart">
-    <ul id="equipmentsItems">
-
-    </ul>
+    <ul id="equipmentsItems"></ul>
 </div>
+
+<input id="generateInvoiceBtn" type="button" value="Generate Invoice"/>
 
 
 <div class="row">
@@ -75,10 +75,23 @@ Equipments Cart
 <script type="text/javascript">
     $(document).ready(function () {
         $('#daysRental').val(1);
-        deleteEquItem = function () {
-            alert('aa');
+        var selectedItems = [];
+        $("#generateInvoiceBtn").attr("disabled", true);
+        deleteEquItem = function (equipmentName, daysRental) {
+            if (confirm('Are you sure you want to remove this item?')) {
+                var deletedItem = 'li:has(\'a\'):contains(\'' + equipmentName + '\')';
+                $(deletedItem).remove();
+                if ($('#equipmentsItems li').length == 0) {
+                    $("#generateInvoiceBtn").attr("disabled", true);
+                }
+                selectedItems.splice(selectedItems.indexOf(equipmentName + ';' + daysRental), 1);
+            }
+            else {
+                return;
+            }
         }
         addEquipment = function () {
+            $("#generateInvoiceBtn").attr("disabled", false);
             var selectedValue = $('#EquipmentsList').val();
             var selectedText = $('#EquipmentsList option[value="' + selectedValue + '"]').text();
             var daysRental = $('#daysRental').val();
@@ -86,9 +99,15 @@ Equipments Cart
                 alert('Rental days should be between 1 and 365.');
                 return;
             }
-            var hrefItem = '<a href="#" onclick="deleteEquItem()">X</a>';
-            var addedItem = '<li>' + selectedText + ' | rental for :' + daysRental.toString() + ' day(s) ' + hrefItem + '</li> ';
+            if ($('li:has(\'a\'):contains(\'' + selectedText + '\')').length > 0) {
+                alert('This equipment item added before.');
+                return;
+            }
+
+            var hrefItem = '<a href="#" onclick="deleteEquItem(\'' + selectedText + '\',\'' + daysRental + '\')">remove</a>';
+            var addedItem = '<li>' + selectedText + ' | rental for :' + daysRental.toString() + ' day(s) | ' + hrefItem + '</li> ';
             $('#equipmentsItems').append(addedItem);
+            selectedItems.push(selectedText + ';' + daysRental);
             $('#daysRental').val(1);
         }
         $("#EquipmentsList").on('change', function () {
@@ -107,8 +126,28 @@ Equipments Cart
                 }
             });
 
-            
+
         });
+
+        $("#generateInvoiceBtn").on('click', function () {
+
+            var postData = { purchasedItems: selectedItems };
+
+
+            $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("BuyEquipments", "Home")',
+                    data: postData,
+                    success: function(data){
+                        alert(data);
+                    },
+                    dataType: "json",
+                    traditional: true
+                });
+
+
+        });
+
     });
 
 </script>

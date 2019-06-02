@@ -17,6 +17,7 @@ namespace EquipmentsRental
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Bootstrapper.Initialise();
+            log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

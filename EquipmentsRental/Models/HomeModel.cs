@@ -5,6 +5,9 @@ namespace EquipmentsRental.Models
 {
     public class HomeModel
     {
-        public List<SelectListItem> EquipmentsList;
+        
+        public List<EquipmentModel> EquipmentsList { get; set; }
+        public EquipmentModel DetailsObject { get; set; }
+        public int SelectedEquipment { get; set; }
     }
 }

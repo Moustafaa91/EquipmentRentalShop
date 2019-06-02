@@ -4,15 +4,46 @@
     ViewBag.Title = "Home Page";
 }
 
+@Html.Hidden("SelectedEquipment", Model.SelectedEquipment)
+
 <div class="jumbotron">
     <h2>Online construction equipment rental</h2>
 
 </div>
+<div class="row">
+    All Equipments:
 
-@if (Model != null && Model.EquipmentsList != null && Model.EquipmentsList.Count > 0)
-{
-    @Html.DropDownList("EquipmentsList", (ICollection<SelectListItem>)Model.EquipmentsList);
-}
+    <div "col-md-4">
+        @if (Model != null && Model.EquipmentsList != null && Model.EquipmentsList.Count > 0)
+        {
+            @*@Html.DropDownList("EquipmentsList", (ICollection<SelectListItem>)Model.EquipmentsSelectListItems, new { id = "EquipmentsList" });*@
+            @*@Html.DropDownListFor(m => m.SelectedEquipment, Model.EquipmentsSelectListItems, "Select Equipment", new { id = "EquipmentsList" })*@
+            <select id="EquipmentsList">
+                @foreach (var item in Model.EquipmentsList)
+                {
+                    <option value="@item.EquipmentId">@item.Name</option>
+                }
+            </select>
+        }
+
+
+
+        Days to rent:
+        <input type="number" size="20" min="1" class="daysRental" />
+        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">Add</a> - 
+        @Html.ActionLink("Show details", "ShowEquipmentDetails")
+
+    </div>
+
+</div>
+
+<div>
+    @{ Html.RenderPartial("~/Views/Equipments/EquipmentDetails.cshtml", Model.DetailsObject); }
+</div>
+
+<div id="divContent">
+
+</div>
 
 
 <div class="row">
@@ -36,3 +67,33 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var s = 1;
+        addEquipment = function () {
+            $('.daysRental').css('visibility', 'visible');
+        }
+        $("#EquipmentsList").on('change', function () {
+
+            var selValue = $('#EquipmentsList').val();
+            //document.getElementById('SelectedEquipment').value = selValue;
+
+            $.ajax({
+                type: "POST",
+                url: "/Home/ShowEquipmentDetails/" + selValue,
+                //dataType: "json",
+                //data: { equipmentId: selValue },
+                success: (data) => {
+                    $("#divContent").html(data);
+                },
+                error: (xhr, status, error) => {
+                    alert(error);
+                }
+            });
+
+            
+        });
+    });
+
+</script>

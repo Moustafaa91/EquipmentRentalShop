@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using BusinessLogic.Rental;
+using System;
+using System.IO;
 
 namespace EquipmentsRental.Controllers
 {
@@ -9,26 +11,42 @@ namespace EquipmentsRental.Controllers
     {
         #region Declare Variables
         private IRentalOperations rentalOperations;
+        HomeModel model;
         #endregion
 
         public HomeController(IRentalOperations _rentalOperations)
         {
             this.rentalOperations = _rentalOperations;
-        }
-        public ActionResult Index()
-        {
-            HomeModel model = new HomeModel();
-            model.EquipmentsList = new List<SelectListItem>();
+            this.model = new HomeModel();
+            this.model.EquipmentsList = new List<EquipmentModel>();
             var result = this.rentalOperations.GetAllEquipments();
             foreach (var item in result)
             {
-                model.EquipmentsList.Add(new SelectListItem()
+                
+                model.EquipmentsList.Add(new EquipmentModel()
                 {
-                    Text = item.Name,
-                    Value = item.EquipmentId.ToString()
+                    Description = item.Description,
+                    EquipmentId = item.EquipmentId,
+                    Name = item.Name,
+                    RentDays = item.RentDays,
+                    Type = (int)item.Type == 1 ? Enums.EquipmentTypes.Heavy : (int)item.Type == 2 ? Enums.EquipmentTypes.Regular : Enums.EquipmentTypes.Specialized
                 });
             }
-            return View("Index",model);
+        }
+        public ActionResult Index()
+        {
+            model.DetailsObject = model.EquipmentsList[0];
+            
+            return View("Index", model);
+        }
+
+        [HttpPost]
+        [Route("ShowEquipmentDetails/{id}")]
+        public ActionResult ShowEquipmentDetails(int id)
+        {
+            model.DetailsObject = model.EquipmentsList.Find(x => x.EquipmentId == id);
+            //model.partialView = RenderRazorViewToString("Index",model);
+            return View("Index", model);
         }
 
         public ActionResult About()
@@ -43,6 +61,21 @@ namespace EquipmentsRental.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public string RenderRazorViewToString(string viewName, object model)
+        {
+            ViewData.Model = model;
+            using (var sw = new StringWriter())
+            {
+                var viewResult = ViewEngines.Engines.FindPartialView(ControllerContext,
+                                                                         viewName);
+                var viewContext = new ViewContext(ControllerContext, viewResult.View,
+                                             ViewData, TempData, sw);
+                viewResult.View.Render(viewContext, sw);
+                viewResult.ViewEngine.ReleaseView(ControllerContext, viewResult.View);
+                return sw.GetStringBuilder().ToString();
+            }
         }
     }
 }

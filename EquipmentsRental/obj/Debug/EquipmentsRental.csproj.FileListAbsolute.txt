@@ -29,6 +29,7 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\ros
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\roslyn\VBCSCompiler.exe
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Antlr3.Runtime.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.exe
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -38,6 +39,9 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Mic
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.ApplicationInsights.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Newtonsoft.Json.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Diagnostics.DiagnosticSource.dll
@@ -48,7 +52,14 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Sys
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Web.WebPages.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Unity.Mvc3.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\WebGrease.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.exe.config
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.Configuration.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Web.Helpers.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Web.Mvc.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\System.Web.Optimization.xml
@@ -69,14 +80,3 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Deb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.pdb
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.exe
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.pdb
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.exe.config
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.dll
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.Configuration.dll
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.dll
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Unity.Mvc3.dll
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.pdb
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.xml
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.xml
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.Configuration.xml

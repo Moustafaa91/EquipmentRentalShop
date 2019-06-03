@@ -1,12 +1,11 @@
-﻿using EquipmentsRental.Models;
-using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using BusinessLogic.BusinessObjects;
 using BusinessLogic.Rental;
+using EquipmentsRental.Models;
 using System;
-using System.IO;
+using System.Collections.Generic;
+using System.Text;
+using System.Web.Mvc;
 using Utilities.Log;
-using BusinessLogic.BusinessObjects;
-using System.Web;
 
 namespace EquipmentsRental.Controllers
 {
@@ -16,7 +15,7 @@ namespace EquipmentsRental.Controllers
         private IRentalOperations rentalOperations;
         private ILogger logger;
         private Order order;
-        HomeModel model;
+        private HomeModel model;
         #endregion
 
         public HomeController(IRentalOperations _rentalOperations, ILogger _logger)
@@ -81,12 +80,15 @@ namespace EquipmentsRental.Controllers
         [Route("BuyEquipments/{purchasedItems}")]
         public ActionResult BuyEquipments(List<string> purchasedItems)
         {
-            logger.Info("HomeController BuyEquipments method start");
-            this.order = new Order();
-            if (purchasedItems.Count == 0)
+            logger.Info("HomeController BuyEquipments controller start");
+            if (purchasedItems == null || purchasedItems.Count == 0)
             {
+                logger.Warn("HomeController BuyEquipments controller parameter (purchasedItems) is null or empty");
                 return View("Index", model);
             }
+
+            string fileName = "Invoice_" + DateTime.Now.ToShortDateString() + ".txt";
+            this.order = new Order();
 
             foreach (var item in purchasedItems)
             {
@@ -97,66 +99,14 @@ namespace EquipmentsRental.Controllers
                 this.order.OrderedEquipments.Add(ConvertModelToBusinessObject(orderedEquipment));
             }
 
-            double price = this.rentalOperations.CalculatePrice(this.order);
-            double loyaltyPoints = this.rentalOperations.CalculateLoyaltyPoints(this.order);
+            StringBuilder invoiceText = this.rentalOperations.GenerateInvoiceFileText(this.order);
 
-
-
-            string name = "output.txt";
-
-            FileInfo info = new FileInfo(name);
-            if (!info.Exists)
-            {
-                using (StreamWriter writer = info.CreateText())
-                {
-                    writer.WriteLine("Hello, I am a new text file");
-                }
-            }
-            string contentType = MimeMapping.GetMimeMapping(info.Name);
-
-            var cd = new System.Net.Mime.ContentDisposition
-            {
-                FileName = info.Name,
-                Inline = true,
-            };
-
-            Response.AppendHeader("Content-Disposition", cd.ToString());
-
-            logger.Info("HomeController BuyEquipments method end");
-            return File(info.OpenRead(), contentType);
+            logger.Info("HomeController BuyEquipments controller end");
+            return Json(new { filename = fileName, filecontent = invoiceText.ToString() });
         }
 
 
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public string RenderRazorViewToString(string viewName, object model)
-        {
-            ViewData.Model = model;
-            using (var sw = new StringWriter())
-            {
-                var viewResult = ViewEngines.Engines.FindPartialView(ControllerContext,
-                                                                         viewName);
-                var viewContext = new ViewContext(ControllerContext, viewResult.View,
-                                             ViewData, TempData, sw);
-                viewResult.View.Render(viewContext, sw);
-                viewResult.ViewEngine.ReleaseView(ControllerContext, viewResult.View);
-                return sw.GetStringBuilder().ToString();
-            }
-        }
-
+        #region Helper Methods
         private EquipmentModel ConvertBusinessObjectToModel(Equipment equipment)
         {
             return new EquipmentModel()
@@ -179,6 +129,7 @@ namespace EquipmentsRental.Controllers
                 Type = (int)equipment.Type == 1 ? BusinessLogic.Enums.EquipmentTypes.Heavy : (int)equipment.Type == 2 ? BusinessLogic.Enums.EquipmentTypes.Regular : BusinessLogic.Enums.EquipmentTypes.Specialized
             };
         }
+        #endregion
 
     }
 }

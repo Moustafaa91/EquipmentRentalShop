@@ -1,15 +1,18 @@
 ﻿using BusinessLogic.BusinessObjects;
 using BusinessLogic.LoyaltyPoints;
 using BusinessLogic.PriceCalculations;
+using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Text;
 
 namespace BusinessLogic.Rental
 {
 
     public class RentalOperations : IRentalOperations
     {
-
+        #region Decalre Variables
+        private const string CurrencySymbol = "€";
+        #endregion
         public List<Equipment> GetAllEquipments()
         {
             List<Equipment> equipments = new List<Equipment>();
@@ -18,7 +21,7 @@ namespace BusinessLogic.Rental
             return equipments;
         }
 
-        public double CalculatePrice(Order order)
+        public double CalculateTotalPrice(Order order)
         {
             double price = 0;
             if (order == null) return price;
@@ -26,7 +29,8 @@ namespace BusinessLogic.Rental
             if (order.OrderedEquipments.Count == 0) return price;
             foreach (Equipment item in order.OrderedEquipments)
             {
-                price += PriceCalculator.CalculatePrice(item);
+                double itemPrice = PriceCalculator.CalculateEquipmentPrice(item);
+                price += itemPrice;
             }
             return price;
         }
@@ -38,6 +42,34 @@ namespace BusinessLogic.Rental
             loyaltyPoints = LoyaltyPointsCalculator.GetLoyaltyPoints(order);
 
             return loyaltyPoints;
+        }
+
+        public StringBuilder GenerateInvoiceFileText(Order order)
+        {
+            StringBuilder invoiceText = new StringBuilder();
+            if (order == null || order.OrderedEquipments == null || order.OrderedEquipments.Count == 0)
+            {
+                return invoiceText;
+            }
+            double totalPrice = this.CalculateTotalPrice(order);
+            double loyaltyPoint = this.CalculateLoyaltyPoints(order);
+
+            invoiceText.AppendLine("Invoice for order contains " + order.OrderedEquipments.Count.ToString() + " item(s), Invoice Date: " + DateTime.Now.ToShortDateString());
+            invoiceText.AppendLine();
+            invoiceText.AppendLine("Equipment item(s) :");
+            int itemNumber = 0;
+            foreach (var item in order.OrderedEquipments)
+            {
+                double itemPrice = PriceCalculator.CalculateEquipmentPrice(item);
+                invoiceText.AppendLine("Item no." + itemNumber++.ToString() + ": " + item.Name + " with price: " + itemPrice.ToString() + CurrencySymbol);
+            }
+
+            invoiceText.AppendLine();
+            invoiceText.AppendLine("Summary:");
+            invoiceText.AppendLine("Total price of the invoice: " + totalPrice + CurrencySymbol);
+            invoiceText.AppendLine("You Gain: " + loyaltyPoint + " Loyalty point(s)");
+
+            return invoiceText;
         }
 
         private List<Equipment> GetMockEquipmentsData()

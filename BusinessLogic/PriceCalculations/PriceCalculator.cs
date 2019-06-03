@@ -7,7 +7,7 @@ namespace BusinessLogic.PriceCalculations
         private static ICalculation calculation;
         
 
-        public static double CalculatePrice(Equipment equipment)
+        public static double CalculateEquipmentPrice(Equipment equipment)
         {
             switch (equipment.Type)
             {

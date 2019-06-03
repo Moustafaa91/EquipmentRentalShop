@@ -8,6 +8,7 @@ namespace BusinessLogic.PriceCalculations
         public double CalculatePrice(Equipment equipment)
         {
             double price = 0;
+            int rentDays = equipment.RentDays;
             
             if (equipment.RentDays <= 3)
             {
@@ -16,7 +17,7 @@ namespace BusinessLogic.PriceCalculations
             else
             {
                 price += ((double)RentalFees.Premium * 3);
-                equipment.RentDays -= 3;
+                rentDays -= 3;
                 price += ((double)RentalFees.Regular * equipment.RentDays);
             }
             return price;

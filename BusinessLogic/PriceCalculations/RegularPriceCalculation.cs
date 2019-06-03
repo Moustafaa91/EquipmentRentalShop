@@ -9,6 +9,7 @@ namespace BusinessLogic.PriceCalculations
         {
             double price = 0;
             price = (double)RentalFees.OneTime;
+            int rentDays = equipment.RentDays;
             if (equipment.RentDays <= 2)
             {
                 price += ((double)RentalFees.Premium * equipment.RentDays);
@@ -16,7 +17,7 @@ namespace BusinessLogic.PriceCalculations
             else
             {
                 price += ((double)RentalFees.Premium * 2);
-                equipment.RentDays -= 2;
+                rentDays -= 2;
                 price += ((double)RentalFees.Regular * equipment.RentDays);
             }
             return price;

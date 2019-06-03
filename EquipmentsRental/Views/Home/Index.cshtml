@@ -78,35 +78,17 @@ Equipments Cart
         var selectedItems = [];
         $("#generateInvoiceBtn").attr("disabled", true);
 
-        function ajax_download(url, data) {
-            var $iframe,
-                iframe_doc,
-                iframe_html;
+        function download(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
 
-            if (($iframe = $('#download_iframe')).length === 0) {
-                $iframe = $("<iframe id='download_iframe'" +
-                    " style='display: none' src='about:blank'></iframe>"
-                ).appendTo("body");
-            }
+            element.style.display = 'none';
+            document.body.appendChild(element);
 
-            iframe_doc = $iframe[0].contentWindow || $iframe[0].contentDocument;
-            if (iframe_doc.document) {
-                iframe_doc = iframe_doc.document;
-            }
+            element.click();
 
-            iframe_html = "<html><head></head><body><form method='POST' action='" +
-                url + "'>"
-
-            Object.keys(data).forEach(function (key) {
-                iframe_html += "<input type='hidden' name='" + key + "' value='" + data[key] + "'>";
-
-            });
-
-            iframe_html += "</form></body></html>";
-
-            iframe_doc.open();
-            iframe_doc.write(iframe_html);
-            $(iframe_doc).find('form').submit();
+            document.body.removeChild(element);
         }
 
         deleteEquItem = function (equipmentName, daysRental) {
@@ -166,14 +148,14 @@ Equipments Cart
         $("#generateInvoiceBtn").on('click', function () {
 
             var postData = { purchasedItems: selectedItems };
-            ajax_download('@Url.Action("BuyEquipments", "Home")', postData);
+            
 
             $.ajax({
                     type: "POST",
                     url: '@Url.Action("BuyEquipments", "Home")',
                     data: postData,
                     success: function(data){
-                        alert(data);
+                        download(data.filename, data.filecontent);
                 },
                 error: (xhr, status, error) => {
                     alert(error);

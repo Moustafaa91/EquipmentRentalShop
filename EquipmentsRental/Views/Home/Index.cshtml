@@ -47,7 +47,7 @@ Equipments Cart
     <ul id="equipmentsItems"></ul>
 </div>
 
-<input id="generateInvoiceBtn" type="button" value="Generate Invoice"/>
+<input id="generateInvoiceBtn" type="button" value="Generate Invoice" />
 
 
 <div class="row">
@@ -77,6 +77,38 @@ Equipments Cart
         $('#daysRental').val(1);
         var selectedItems = [];
         $("#generateInvoiceBtn").attr("disabled", true);
+
+        function ajax_download(url, data) {
+            var $iframe,
+                iframe_doc,
+                iframe_html;
+
+            if (($iframe = $('#download_iframe')).length === 0) {
+                $iframe = $("<iframe id='download_iframe'" +
+                    " style='display: none' src='about:blank'></iframe>"
+                ).appendTo("body");
+            }
+
+            iframe_doc = $iframe[0].contentWindow || $iframe[0].contentDocument;
+            if (iframe_doc.document) {
+                iframe_doc = iframe_doc.document;
+            }
+
+            iframe_html = "<html><head></head><body><form method='POST' action='" +
+                url + "'>"
+
+            Object.keys(data).forEach(function (key) {
+                iframe_html += "<input type='hidden' name='" + key + "' value='" + data[key] + "'>";
+
+            });
+
+            iframe_html += "</form></body></html>";
+
+            iframe_doc.open();
+            iframe_doc.write(iframe_html);
+            $(iframe_doc).find('form').submit();
+        }
+
         deleteEquItem = function (equipmentName, daysRental) {
             if (confirm('Are you sure you want to remove this item?')) {
                 var deletedItem = 'li:has(\'a\'):contains(\'' + equipmentName + '\')';
@@ -90,6 +122,7 @@ Equipments Cart
                 return;
             }
         }
+
         addEquipment = function () {
             $("#generateInvoiceBtn").attr("disabled", false);
             var selectedValue = $('#EquipmentsList').val();
@@ -110,6 +143,7 @@ Equipments Cart
             selectedItems.push(selectedText + ';' + daysRental);
             $('#daysRental').val(1);
         }
+
         $("#EquipmentsList").on('change', function () {
 
             var selectedValue = $('#EquipmentsList').val();
@@ -132,7 +166,7 @@ Equipments Cart
         $("#generateInvoiceBtn").on('click', function () {
 
             var postData = { purchasedItems: selectedItems };
-
+            ajax_download('@Url.Action("BuyEquipments", "Home")', postData);
 
             $.ajax({
                     type: "POST",
@@ -140,12 +174,13 @@ Equipments Cart
                     data: postData,
                     success: function(data){
                         alert(data);
-                    },
-                    dataType: "json",
+                },
+                error: (xhr, status, error) => {
+                    alert(error);
+                },
+                    //dataType: "json",
                     traditional: true
                 });
-
-
         });
 
     });

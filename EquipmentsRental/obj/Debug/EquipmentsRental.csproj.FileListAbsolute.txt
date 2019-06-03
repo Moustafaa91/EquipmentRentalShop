@@ -1,3 +1,5 @@
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csprojAssemblyReference.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\ApplicationInsights.config
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\EquipmentsRental.dll.config
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\EquipmentsRental.dll
@@ -30,6 +32,7 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\ros
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Antlr3.Runtime.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.exe
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\log4net.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -56,6 +59,7 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Uni
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\WebGrease.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\BusinessLogic.exe.config
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\log4net.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.ServiceLocation.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.Practices.Unity.xml
@@ -75,10 +79,8 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Mic
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.AI.Web.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csprojAssemblyReference.cache
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.pdb
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\log4net.dll
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\log4net.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Utilities.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Utilities.pdb

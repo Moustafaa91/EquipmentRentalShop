@@ -1,0 +1,9 @@
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Debug\Utilities.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Debug\Utilities.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Debug\log4net.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Debug\log4net.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Debug\Utilities.csprojAssemblyReference.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Debug\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Debug\Utilities.csproj.CopyComplete
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Debug\Utilities.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Debug\Utilities.pdb

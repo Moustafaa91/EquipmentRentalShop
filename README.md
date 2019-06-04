@@ -9,12 +9,12 @@ This repository for Online construction equipment rental MVC prove-of-concept ap
 To start build the project make sure of the following:
 * .Net framework 4.5 installed
 * Unity package for applying DI
-  - it should be installed in project, and in case it's not you can simply installed with the following command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3``` to project [EquipmentsRental]
+  - it should be installed in project, and in case it's not you can simply install it with the following command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3``` to project [EquipmentsRental]
 * log4net package for Logging
-  - it should be installed in project, and in case it's not you can simply installed with the following command in Package Manager Console at visual studio ```Install-Package log4net``` to projects [EquipmentsRental, Utilities]
+  - it should be installed in project, and in case it's not you can simply install it with the following command in Package Manager Console at visual studio ```Install-Package log4net``` to projects [EquipmentsRental, Utilities]
 
 ## How to use
-Simply download the project and run it in Visual Studio, all packages needed are included and after the run, you will use single page and you will be able to: 
+Simply download the project and run it in Visual Studio, all packages needed are included and after the run, you will see single page and you will be able to: 
 * List all equipment.
 * Add equipment item with amount of rental days to the cart. (you cannot add the same item twice).
 * Generate invoice which will download a text file with details of your order.

@@ -25,11 +25,11 @@ Simply download the project and run it in Visual Studio, all packages needed are
 * All unit tests passed.
 
 ### BusinessLogic
-This application performs all Business Logic operations needed, and it's separated into different folder each one contains single operation.
+This application performs all Business Logic operations needed, and it's separated into different folders each one contains single operation.
 * ```BusinessObjects``` All object needed while performing business functions, this different than Model, as these objects belong only to business functions.
 * ```Enums``` All Enums used while performing business functions
 * ```LoyaltyPoints``` contains one static class to perform operations of calculating loyalty points
-* ```PriceCalculations``` contains classes needed to perform operations of calculating loyalty points, in this folder I preferred to use 
+* ```PriceCalculations``` contains classes needed to perform operations of calculating equipments' price, in this folder I preferred to use 
 [Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern). There are several patterns to do this but I preferred this one as it's more readable and easiest to maintain in the future.
 * ```Rental``` contains class which will be used by the controller to perform operations.
 
@@ -54,8 +54,8 @@ and for controllers ```HomeController.cs``` contains all controller methods need
 
 ## Future work
 * Add magic touch for UI enhancements.
-* Change communication between backend and frontend to be Message-based architecture.
 * Fix some known issues when switching between languages, e.g. rtl & ltr issues.
+* Change communication between backend and frontend to be Message-based architecture.
 
 ## Author
 

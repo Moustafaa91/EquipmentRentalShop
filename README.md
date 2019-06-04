@@ -43,5 +43,5 @@ Any utilites classes or methods used in application, In this solution we have on
 * **Moustafa Attia** - *Software Engineer .Net/C#* - [Moustafa Attia](https://github.com/MoustafaAttia)
 
 ## Acknowledgments
-
-*
+* For download function in javascript, [I used this stackoverflow question](https://stackoverflow.com/questions/3665115/how-to-create-a-file-in-memory-for-user-to-download-but-not-through-server)
+* For language configurations, [I used this article](https://www.c-sharpcorner.com/article/how-to-create-multiple-languages-in-asp-net-mvc-4-5-framework/)

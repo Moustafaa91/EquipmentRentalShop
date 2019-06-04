@@ -124,6 +124,10 @@ Equipments Cart:
 
         $("#generateInvoiceBtn").on('click', function () {
 
+            if (!confirm("Are you sure you want to generate invoice?")) {
+                return;
+            }
+
             var postData = { purchasedItems: selectedItems };
             
 

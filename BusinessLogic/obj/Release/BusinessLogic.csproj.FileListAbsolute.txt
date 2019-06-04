@@ -15,3 +15,8 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Releas
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.exe
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\Utilities.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\log4net.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\Utilities.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\log4net.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.csproj.CopyComplete

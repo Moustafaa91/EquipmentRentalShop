@@ -4,6 +4,7 @@ using BusinessLogic.PriceCalculations;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLogic.Rental
 {
@@ -44,7 +45,7 @@ namespace BusinessLogic.Rental
             return loyaltyPoints;
         }
 
-        public StringBuilder GenerateInvoiceFileText(Order order)
+        public async Task<StringBuilder> GenerateInvoiceFileText(Order order)
         {
             StringBuilder invoiceText = new StringBuilder();
             if (order == null || order.OrderedEquipments == null || order.OrderedEquipments.Count == 0)
@@ -57,7 +58,7 @@ namespace BusinessLogic.Rental
             invoiceText.AppendLine("Invoice for order contains " + order.OrderedEquipments.Count.ToString() + " item(s), Invoice Date: " + DateTime.Now.ToShortDateString());
             invoiceText.AppendLine();
             invoiceText.AppendLine("Equipment item(s) :");
-            int itemNumber = 0;
+            int itemNumber = 1;
             foreach (var item in order.OrderedEquipments)
             {
                 double itemPrice = PriceCalculator.CalculateEquipmentPrice(item);

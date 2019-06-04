@@ -1,6 +1,7 @@
 ﻿using BusinessLogic.BusinessObjects;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLogic.Rental
 {
@@ -9,6 +10,6 @@ namespace BusinessLogic.Rental
         List<Equipment> GetAllEquipments();
         double CalculateTotalPrice(Order order);
         double CalculateLoyaltyPoints(Order order);
-        StringBuilder GenerateInvoiceFileText(Order order);
+        Task<StringBuilder> GenerateInvoiceFileText(Order order);
     }
 }

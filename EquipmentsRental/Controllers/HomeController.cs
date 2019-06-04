@@ -4,6 +4,7 @@ using EquipmentsRental.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Utilities.Log;
 
@@ -18,6 +19,7 @@ namespace EquipmentsRental.Controllers
         private HomeModel model;
         #endregion
 
+        #region Constructor
         public HomeController(IRentalOperations _rentalOperations, ILogger _logger)
         {
             try
@@ -40,7 +42,10 @@ namespace EquipmentsRental.Controllers
             }
             
         }
-        public ActionResult Index()
+        #endregion
+
+        #region Controller Methods
+        public async Task<ActionResult> Index()
         {
             try
             {
@@ -59,7 +64,7 @@ namespace EquipmentsRental.Controllers
 
         [HttpGet]
         [Route("ShowEquipmentDetails/{id}")]
-        public ActionResult ShowEquipmentDetails(int id)
+        public async Task<ActionResult> ShowEquipmentDetails(int id)
         {
             try
             {
@@ -78,7 +83,7 @@ namespace EquipmentsRental.Controllers
 
         [HttpPost]
         [Route("BuyEquipments/{purchasedItems}")]
-        public ActionResult BuyEquipments(List<string> purchasedItems)
+        public async Task<ActionResult> BuyEquipments(List<string> purchasedItems)
         {
             logger.Info("HomeController BuyEquipments controller start");
             if (purchasedItems == null || purchasedItems.Count == 0)
@@ -99,12 +104,12 @@ namespace EquipmentsRental.Controllers
                 this.order.OrderedEquipments.Add(ConvertModelToBusinessObject(orderedEquipment));
             }
 
-            StringBuilder invoiceText = this.rentalOperations.GenerateInvoiceFileText(this.order);
+            StringBuilder invoiceText = await this.rentalOperations.GenerateInvoiceFileText(this.order);
 
             logger.Info("HomeController BuyEquipments controller end");
             return Json(new { filename = fileName, filecontent = invoiceText.ToString() });
         }
-
+        #endregion
 
         #region Helper Methods
         private EquipmentModel ConvertBusinessObjectToModel(Equipment equipment)

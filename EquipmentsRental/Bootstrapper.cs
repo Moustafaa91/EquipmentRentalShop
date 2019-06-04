@@ -22,7 +22,6 @@ namespace EquipmentsRental
 
             container.RegisterType<IRentalOperations, RentalOperations>();
             container.RegisterType<ILogger, Logger>();
-            container.RegisterType<IController, EquipmentsController>("Equipments");
             container.RegisterType<IController, HomeController>("Home");
 
             return container;

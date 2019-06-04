@@ -10,7 +10,7 @@ To start build the project make sure of the following:
 * .Net framework 4.5 installed
 * Unity package for applying DI
   - it should be installed in project, and in case it's not you can simply installed with the following command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3``` to project [EquipmentsRental]
-  * log4net package for Logging
+* log4net package for Logging
   - it should be installed in project, and in case it's not you can simply installed with the following command in Package Manager Console at visual studio ```Install-Package log4net``` to projects [EquipmentsRental, Utilities]
 
 ## How to use

@@ -6,8 +6,8 @@ This repository for Online construction equipment rental MVC prove-of-concept ap
 
 ### Prerequisites
 
-To start build the project you  need to make sure you installed:
-* Make sure that .Net framework 4.5 installed
+To start build the project make sure of the following:
+* .Net framework 4.5 installed
 * Unity package for applying DI
   - it should be installed in project, and in case it's not you can simply installed with the following command in Package Manager Console at visual studio ```Install-Package Unity.Mvc3``` to project [EquipmentsRental]
   * log4net package for Logging

@@ -2,8 +2,13 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Release\Ut
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Release\Utilities.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Release\log4net.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Release\log4net.xml
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.csprojAssemblyReference.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\bin\Release\Ar\Utilities.resources.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.Resources.Resource.resources
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.Resources.Resource.Ar.resources
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.csproj.GenerateResource.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Ar\Utilities.resources.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\Utilities\obj\Release\Utilities.csprojAssemblyReference.cache

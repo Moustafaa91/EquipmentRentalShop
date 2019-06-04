@@ -63,7 +63,6 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bi
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Debug\EquipmentRental.Tests.csprojAssemblyReference.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Debug\EquipmentRental.Tests.csproj.CoreCompileInputs.cache
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Debug\EquipmentRental.Tests.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Debug\EquipmentRental.Tests.dll

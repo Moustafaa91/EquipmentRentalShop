@@ -20,3 +20,4 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Debug\
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Debug\Utilities.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Debug\Utilities.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Debug\Ar\Utilities.resources.dll

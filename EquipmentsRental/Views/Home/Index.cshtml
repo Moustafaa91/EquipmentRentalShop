@@ -4,14 +4,12 @@
     ViewBag.Title = "Home Page";
 }
 
-@Html.Hidden("SelectedEquipment", Model.SelectedEquipment)
-
 <div class="jumbotron">
-    <h2>Online construction equipment rental</h2>
+    <h4>@Utilities.Resources.Resource.HeaderTitle</h4>
 
 </div>
 <div class="row">
-    All Equipments:
+    @Utilities.Resources.Resource.EquipmentsList
 
     <div "col-md-4">
         @if (Model != null && Model.EquipmentsList != null && Model.EquipmentsList.Count > 0)
@@ -28,9 +26,9 @@
 
 
 
-        Days to rent:
+        @Utilities.Resources.Resource.RentDays
         <input style="width:60px" type="number" min="1" max="365" id="daysRental" />
-        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">Add to Cart</a>
+        <a href="#" onclick="addEquipment()" class="addEquipmentLabel">@Utilities.Resources.Resource.AddToCart</a>
 
     </div>
 
@@ -42,12 +40,12 @@
     @{ Html.RenderPartial("~/Views/Equipments/EquipmentDetails.cshtml", Model.DetailsObject); }
 </div>
 
-Equipments Cart:
+@Utilities.Resources.Resource.EquipmentsCart
 <div class="equipmentsCart">
     <ul id="equipmentsItems"></ul>
 </div>
 
-<input id="generateInvoiceBtn" type="button" value="Generate Invoice" />
+<input id="generateInvoiceBtn" type="button" value='@Utilities.Resources.Resource.GenerateInvoice' />
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -69,7 +67,7 @@ Equipments Cart:
         }
 
         deleteEquItem = function (equipmentName, daysRental) {
-            if (confirm('Are you sure you want to remove this item?')) {
+            if (confirm('@Utilities.Resources.Resource.DeleteMessage')) {
                 var deletedItem = 'li:has(\'a\'):contains(\'' + equipmentName + '\')';
                 $(deletedItem).remove();
                 if ($('#equipmentsItems li').length == 0) {
@@ -88,16 +86,16 @@ Equipments Cart:
             var selectedText = $('#EquipmentsList option[value="' + selectedValue + '"]').text();
             var daysRental = $('#daysRental').val();
             if (daysRental < 1 || daysRental > 365) {
-                alert('Rental days should be between 1 and 365.');
+                alert('@Utilities.Resources.Resource.RentalDaysWarning');
                 return;
             }
             if ($('li:has(\'a\'):contains(\'' + selectedText + '\')').length > 0) {
-                alert('This equipment item added before.');
+                alert('@Utilities.Resources.Resource.DuplicateItem');
                 return;
             }
 
-            var hrefItem = '<a href="#" onclick="deleteEquItem(\'' + selectedText + '\',\'' + daysRental + '\')">remove</a>';
-            var addedItem = '<li>' + selectedText + ' | rental for :' + daysRental.toString() + ' day(s) | ' + hrefItem + '</li> ';
+            var hrefItem = '<a href="#" onclick="deleteEquItem(\'' + selectedText + '\',\'' + daysRental + '\')">' + '@Utilities.Resources.Resource.Remove' + '</a>';
+            var addedItem = '<li>' + selectedText + ' | ' + '@Utilities.Resources.Resource.RentalFor' + ' :' + daysRental.toString() + ' @Utilities.Resources.Resource.Days' + ' | ' + hrefItem + '</li> ';
             $('#equipmentsItems').append(addedItem);
             selectedItems.push(selectedText + ';' + daysRental);
             $('#daysRental').val(1);
@@ -124,12 +122,12 @@ Equipments Cart:
 
         $("#generateInvoiceBtn").on('click', function () {
 
-            if (!confirm("Are you sure you want to generate invoice?")) {
+            if (!confirm('@Utilities.Resources.Resource.GenerateInvoiceMessage')) {
                 return;
             }
 
             var postData = { purchasedItems: selectedItems };
-            
+
 
             $.ajax({
                     type: "POST",

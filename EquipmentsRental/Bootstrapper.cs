@@ -4,6 +4,7 @@ using Unity.Mvc3;
 using BusinessLogic.Rental;
 using EquipmentsRental.Controllers;
 using Utilities.Log;
+using Utilities.Language;
 
 namespace EquipmentsRental
 {
@@ -22,6 +23,7 @@ namespace EquipmentsRental
 
             container.RegisterType<IRentalOperations, RentalOperations>();
             container.RegisterType<ILogger, Logger>();
+            container.RegisterType<ILanguageMang, LanguageMang>();
             container.RegisterType<IController, HomeController>("Home");
 
             return container;

@@ -84,3 +84,4 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Deb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Debug\EquipmentsRental.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Utilities.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Utilities.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Ar\Utilities.resources.dll

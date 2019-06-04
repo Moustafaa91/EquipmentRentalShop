@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Mvc;
+using Utilities.Language;
 using Utilities.Log;
 
 namespace EquipmentsRental.Controllers
@@ -15,25 +17,28 @@ namespace EquipmentsRental.Controllers
         #region Declare Variables
         private IRentalOperations rentalOperations;
         private ILogger logger;
+        private ILanguageMang languageMang;
         private Order order;
         private HomeModel model;
         #endregion
 
         #region Constructor
-        public HomeController(IRentalOperations _rentalOperations, ILogger _logger)
+        public HomeController(IRentalOperations _rentalOperations, ILogger _logger, ILanguageMang _languageMang)
         {
             try
             {
                 this.rentalOperations = _rentalOperations;
                 this.logger = _logger;
+                this.languageMang = _languageMang;
                 logger.Info("HomeController constructor start");
                 this.model = new HomeModel();
                 this.model.EquipmentsList = new List<EquipmentModel>();
                 var result = this.rentalOperations.GetAllEquipments();
                 foreach (var item in result)
                 {
-                    model.EquipmentsList.Add(ConvertBusinessObjectToModel(item));
+                    this.model.EquipmentsList.Add(ConvertBusinessObjectToModel(item));
                 }
+
                 logger.Info("HomeController constructor end");
             }
             catch (Exception ex)
@@ -109,6 +114,39 @@ namespace EquipmentsRental.Controllers
             logger.Info("HomeController BuyEquipments controller end");
             return Json(new { filename = fileName, filecontent = invoiceText.ToString() });
         }
+
+        public ActionResult ChangeLanguage(string lang)
+        {
+            this.languageMang.SetLanguage(lang);
+            return RedirectToAction("Index", "Home");
+        }
+
+        protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
+        {
+            string lang = null;
+            HttpCookie langCookie = Request.Cookies["culture"];
+            if (langCookie != null)
+            {
+                lang = langCookie.Value;
+            }
+            else
+            {
+                var userLanguage = Request.UserLanguages;
+                var userLang = userLanguage != null ? userLanguage[0] : "";
+                if (userLang != "")
+                {
+                    lang = userLang;
+                }
+                else
+                {
+                    lang = this.languageMang.GetDefaultLanguage();
+                }
+            }
+            new LanguageMang().SetLanguage(lang);
+            return base.BeginExecuteCore(callback, state);
+        }
+
+        
         #endregion
 
         #region Helper Methods

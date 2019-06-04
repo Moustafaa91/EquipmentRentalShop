@@ -84,3 +84,4 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Rel
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Release\EquipmentsRental.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Release\EquipmentsRental.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\obj\Release\EquipmentsRental.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentsRental\bin\Ar\Utilities.resources.dll

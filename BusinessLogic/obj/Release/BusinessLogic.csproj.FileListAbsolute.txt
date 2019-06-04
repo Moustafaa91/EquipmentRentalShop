@@ -20,3 +20,4 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Releas
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\Utilities.pdb
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\log4net.xml
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\obj\Release\BusinessLogic.csproj.CopyComplete
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\BusinessLogic\bin\Release\Ar\Utilities.resources.dll

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Utilities.Resources;
 
 namespace BusinessLogic.Rental
 {
@@ -55,20 +56,20 @@ namespace BusinessLogic.Rental
             double totalPrice = this.CalculateTotalPrice(order);
             double loyaltyPoint = this.CalculateLoyaltyPoints(order);
 
-            invoiceText.AppendLine("Invoice for order contains " + order.OrderedEquipments.Count.ToString() + " item(s), Invoice Date: " + DateTime.Now.ToShortDateString());
+            invoiceText.AppendLine(string.Format(Resource.InvoiceHeader , order.OrderedEquipments.Count.ToString(), DateTime.Now.ToShortDateString()));
             invoiceText.AppendLine();
-            invoiceText.AppendLine("Equipment item(s) :");
+            invoiceText.AppendLine(Resource.InvoiceEquipmentItems);
             int itemNumber = 1;
             foreach (var item in order.OrderedEquipments)
             {
                 double itemPrice = PriceCalculator.CalculateEquipmentPrice(item);
-                invoiceText.AppendLine("Item no." + itemNumber++.ToString() + ": " + item.Name + " with price: " + itemPrice.ToString() + CurrencySymbol);
+                invoiceText.AppendLine(string.Format(Resource.InvoiceItemNoAndPrice, itemNumber++.ToString() , item.Name , itemPrice.ToString() , CurrencySymbol));
             }
 
             invoiceText.AppendLine();
-            invoiceText.AppendLine("Summary:");
-            invoiceText.AppendLine("Total price of the invoice: " + totalPrice + CurrencySymbol);
-            invoiceText.AppendLine("You Gain: " + loyaltyPoint + " Loyalty point(s)");
+            invoiceText.AppendLine(Resource.Summary); 
+            invoiceText.AppendLine(string.Format(Resource.InvoiceTotalPrice, totalPrice, CurrencySymbol));
+            invoiceText.AppendLine(string.Format(Resource.InvoiceTotalLoyaltyPoints, loyaltyPoint));
 
             return invoiceText;
         }
@@ -80,37 +81,37 @@ namespace BusinessLogic.Rental
                 new Equipment()
                 {
                     EquipmentId =  1,
-                    Name = "Caterpillar bulldozer",
+                    Name = Resource.CaterpillarBulldozerName,
                     Type = Enums.EquipmentTypes.Heavy,
-                    Description = "Description of Caterpillar bulldozer"
+                    Description = Resource.CaterpillarBulldozerDescription
                 },
                 new Equipment()
                 {
                     EquipmentId = 2,
-                    Name = "KamAZ truck",
+                    Name = Resource.KamAZTruckName,
                     Type = Enums.EquipmentTypes.Regular,
-                    Description = "Description of KamAZ truck"
+                    Description = Resource.KamAZTruckDescription
                 },
                 new Equipment()
                 {
                     EquipmentId = 3,
-                    Name = "Komatsu crane",
+                    Name = Resource.KomatsuCraneName,
                     Type = Enums.EquipmentTypes.Heavy,
-                    Description = "Description of Komatsu crane"
+                    Description = Resource.KomatsuCraneDescription
                 },
                 new Equipment()
                 {
                      EquipmentId = 4,
-                     Name = "Volvo steamroller",
+                     Name = Resource.VolvoSteamrollerName,
                      Type = Enums.EquipmentTypes.Regular,
-                     Description = "Description of Volvo steamroller"
+                     Description = Resource.VolvoSteamrollerDescription
                 },
                 new Equipment()
                 {
                     EquipmentId = 5,
-                    Name = "Bosch jackhammer",
+                    Name = Resource.BoschJackhammerName,
                     Type = Enums.EquipmentTypes.Specialized,
-                    Description = "Description of Bosch jackhammer"
+                    Description = Resource.BoschJackhammerDescription
                 }
             };
         }

@@ -18,7 +18,7 @@ namespace BusinessLogic.PriceCalculations
             {
                 price += ((double)RentalFees.Premium * 3);
                 rentDays -= 3;
-                price += ((double)RentalFees.Regular * equipment.RentDays);
+                price += ((double)RentalFees.Regular * rentDays);
             }
             return price;
         }

@@ -40,3 +40,11 @@ C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\ob
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Release\EquipmentRental.Tests.csproj.CopyComplete
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Release\EquipmentRental.Tests.dll
 C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\obj\Release\EquipmentRental.Tests.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\BusinessLogic.exe
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\Utilities.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\log4net.dll
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\BusinessLogic.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\BusinessLogic.exe.config
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\Utilities.pdb
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\log4net.xml
+C:\Users\Mostafa.Attia\source\repos\EquipmentRentalShop\EquipmentRental.Tests\bin\Release\Ar\Utilities.resources.dll

@@ -20,9 +20,9 @@ Simply download the project and run it in Visual Studio, all packages needed are
 * Generate invoice which will download a text file with details of your order.
 
 ## Solution Details and Design
-This solution follows two-tier architecture, front-end which built as MVC application and back-end which is a console application.
-The site is multi-language (English and Arabic).
-All unit tests passed.
+* This solution follows two-tier architecture, front-end which built as MVC application and back-end which is a console application.
+* The site is multi-language (English and Arabic).
+* All unit tests passed.
 
 ### BusinessLogic
 This application performs all Business Logic operations needed, and it's separated into different folder each one contains single operation.

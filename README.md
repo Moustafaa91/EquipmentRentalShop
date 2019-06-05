@@ -30,7 +30,7 @@ This application performs all Business Logic operations needed, and it's separat
 * ```Enums``` All Enums used while performing business functions
 * ```LoyaltyPoints``` contains one static class to perform operations of calculating loyalty points
 * ```PriceCalculations``` contains classes needed to perform operations of calculating equipments' price, in this folder I preferred to use 
-[Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern). There are several patterns to do this but I preferred this one as it's more readable and easiest to maintain in the future.
+[Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern). There are several patterns to do this but I preferred this one as in this case we need to determine which calculation method we need to perform at run time, also it's more readable and easiest to maintain in the future.
 * ```Rental``` contains class which will be used by the controller to perform operations.
 
 ### EquipmentsRental
